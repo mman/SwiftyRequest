@@ -27,7 +27,7 @@ public class RestRequest: NSObject  {
 
     /// A default `URLSession` instance
     private var session: URLSession {
-        var session = URLSession(configuration: URLSessionConfiguration.default)
+        var session = URLSession.shared
         if isSecure && isSelfSigned {
             let config = URLSessionConfiguration.default
             config.requestCachePolicy = .reloadIgnoringLocalCacheData
